@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Email Template</title>
+    <style>
+        body,
+        * {
+        }
+
+        body {
+            margin: 0;
+            padding: 10px 0 0;
+            max-width: 600px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .stayconnected {
+            font-family: "Work Sans", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #4d4d4d;
+            padding-top: 25px;
+        }
+
+        span + span {
+            margin-left: 20px;
+        }
+
+        span {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        .social a + a {
+            margin-left: 25px;
+        }
+    </style>
+</head>
+
+<body style="margin: 0 auto;">
+    <div style="text-align: center; padding: 62px 0;  background-position: center; background-size: cover; background-color: #204069; background-image: url(banner-wave.svg);">
+        <img src="{{CLIENT_URL}}/assets/template/logo.svg" alt="OFFICESYNC Logo" />
+    </div>
+
+    {{SECTION_BODY}}
+
+    <div style="
+        text-align: center;
+        margin-top: 60px;
+        border-top: 1px solid #CFCFCF;
+        padding-top: 26px;
+      ">
+        <h3 style="font-family: Work Sans, sans-serif; font-weight: 400; font-size: 18px;">STAY CONNECTED</h3>
+        <ul style="list-style: none; margin: 0; padding: 0;">
+            <li style="display: inline-block; margin-right: 30px;">
+                <a href="#" style="background-image: url('facebook.svg'); width: 28px; height: 28px; display:inline-block; background-repeat: no-repeat; background-position: center; background-color: #57B5C3; border-radius: 50%;"></a>
+            </li>
+            <li style="display: inline-block; margin-right: 30px;">
+                <a href="#" style="background-image: url('twitter.svg'); width: 28px; height: 28px; display:inline-block; background-repeat: no-repeat; background-position: center; background-color: #57B5C3; border-radius: 50%;"></a>
+            </li>
+            <li style="display: inline-block; margin-right: 30px;">
+                <a href="#" style="background-image: url('linkedin.svg'); width: 28px; height: 28px; display:inline-block; background-repeat: no-repeat; background-position: center; background-color: #57B5C3; border-radius: 50%;"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="#" style="background-image: url('instagram.svg'); width: 28px; height: 28px; display:inline-block; background-repeat: no-repeat; background-position: center; background-color: #57B5C3; border-radius: 50%;"></a>
+            </li>
+        </ul>
+        <ul style="list-style: none; margin: 32px 0 0; padding: 0;">
+            <li style="display: inline-block; margin-right: 30px; color: #878788; font-family: Work Sans, sans-serif;"><a style="color: #878788; font-family: Work Sans, sans-serif;" href="#">Support</a></li>
+            <li style="display: inline-block; margin-right: 30px; color: #878788; font-family: Work Sans, sans-serif;"><a style="color: #878788; font-family: Work Sans, sans-serif;" href="#">FAQ</a></li>
+            <li style="display: inline-block; margin-right: 30px; color: #878788; font-family: Work Sans, sans-serif;"><a style="color: #878788; font-family: Work Sans, sans-serif;" href="#">Privacy Policy</a></li>
+            <li style="display: inline-block; margin-right: 30px; color: #878788; font-family: Work Sans, sans-serif;"><a style="color: #878788; font-family: Work Sans, sans-serif;" href="#">Terms & Condition</a></li>
+        </ul>
+    </div>
+    <div class="footer" style="padding: 16px 32px; background-color: #DDF0F3; margin-top: 32px;">
+        <p style="color: #00305B; font-weight: 500; font-size: 12px; font-family: Work Sans, sans-serif; display: inline-block; margin: 0; width: 49%; text-align: left;">©OFFICESYNC all rights reserved. </p>
+        <a style="color: #00305B; font-weight: 500; font-size: 12px; font-family: Work Sans, sans-serif; display: inline-block; width: 49%; text-align: right;" href="#">www.officeSync.com</a>
+    </div>
+</body>
+</html>
