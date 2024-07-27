@@ -1,6 +1,6 @@
 ﻿using OfficeSync.Domain.Interfaces;
 
-namespace OfficeSync.Domain.Entities
+namespace OfficeSync.Domain.Entities.Master
 {
     public class UserProfile : BaseEntity<int>
     {

@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using OfficeSync.Application.Common.Exceptions;
 using OfficeSync.Application.Common.Interfaces;
 using OfficeSync.Application.Common.Models;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Domain.Enumerations;
 using OfficeSync.Domain.Interfaces;
 using OfficeSync.Infrastructure.Common.Options;
@@ -184,8 +184,8 @@ namespace OfficeSync.Infrastructure.Services
             user.Email = email;
             user.LastUpdatedAt = DateTimeOffset.UtcNow;
             user.LastUpdatedBy = currentUserEmail;
-            user.RoleName = RoleInitializer.CUSTOMER_NAME;
-            user.Roles = new List<UserRole> { new UserRole { RoleId = RoleInitializer.CUSTOMER } };
+            //user.RoleName = RoleInitializer.CUSTOMER_NAME;
+            //user.Roles = new List<UserRole> { new UserRole { RoleId = RoleInitializer.CUSTOMER } };
 
             user.EventActivity = UserEventActivity.Invite;
             user.Link = clientUrl;
@@ -231,11 +231,11 @@ namespace OfficeSync.Infrastructure.Services
                 Email = email,
                 LastUpdatedAt = DateTimeOffset.UtcNow,
                 LastUpdatedBy = userProfile.LastUpdatedBy,
-                Roles = new List<UserRole> { new UserRole { RoleId = RoleInitializer.AGENT } },
+                //Roles = new List<UserRole> { new UserRole { RoleId = RoleInitializer.AGENT } },
                 ProfileRef = userProfile,
                 EventActivity = UserEventActivity.Invite,
                 Link = clientUrl,
-                RoleName = RoleInitializer.AGENT_NAME,
+                //RoleName = RoleInitializer.AGENT_NAME,
                 Token = userProfile.LastUpdatedBy
             };
 
@@ -510,7 +510,7 @@ namespace OfficeSync.Infrastructure.Services
         public IQueryable<IUser> QueryCustomers()
         {
             var customers = _userManager.Users.Include(i => i.Roles)
-                                              .Where(w => w.Roles.Any(a => a.RoleId == RoleInitializer.CUSTOMER))
+                                              //.Where(w => w.Roles.Any(a => a.RoleId == RoleInitializer.CUSTOMER))
                                               .Select(s => new User
                                               {
                                                   Id = s.Id,
@@ -526,7 +526,7 @@ namespace OfficeSync.Infrastructure.Services
             var agents = await _userManager.Users.Include(i => i.ProfileRef)
                                                  .Include(i => i.Roles)
                                                  .ThenInclude(i => i.RoleRef)
-                                                 .Where(w => w.Roles.Any(a => a.RoleId == RoleInitializer.AGENT))
+                                                 //.Where(w => w.Roles.Any(a => a.RoleId == RoleInitializer.AGENT))
                                                  .Select(s => new UserModel
                                                  {
                                                      Id = s.Id,

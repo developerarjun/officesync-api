@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Domain.Enumerations;
 using OfficeSync.Domain.Interfaces;
 using System.ComponentModel.DataAnnotations.Schema;

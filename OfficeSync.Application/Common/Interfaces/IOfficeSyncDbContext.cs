@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 
 namespace OfficeSync.Application.Common.Interfaces
 {

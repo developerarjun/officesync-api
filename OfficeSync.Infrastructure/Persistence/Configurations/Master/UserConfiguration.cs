@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OfficeSync.Infrastructure.Persistence.Identity;
 
-namespace OfficeSync.Infrastructure.Persistence.Configurations
+namespace OfficeSync.Infrastructure.Persistence.Configurations.Master
 {
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {

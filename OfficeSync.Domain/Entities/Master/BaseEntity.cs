@@ -1,4 +1,4 @@
-﻿namespace OfficeSync.Domain.Entities
+﻿namespace OfficeSync.Domain.Entities.Master
 {
     public abstract class BaseEntity<T>
     {

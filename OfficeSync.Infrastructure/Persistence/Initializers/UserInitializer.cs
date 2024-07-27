@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Infrastructure.Persistence.Identity;
 
 namespace OfficeSync.Infrastructure.Persistence.Initializers
@@ -8,7 +8,7 @@ namespace OfficeSync.Infrastructure.Persistence.Initializers
     {
         public UserInitializer(ModelBuilder modelBuilder) : base(modelBuilder) { }
 
-        public const int SUPER_AGENT_ID = 1;
+        public const int SUPER_ADMIN_ID = 1;
         public const string SUPER_EMAIL = "developerarjun1@gmail.com";
         public void SeedUsers()
         {
@@ -16,7 +16,7 @@ namespace OfficeSync.Infrastructure.Persistence.Initializers
 
             var dbSuperAgentProfile = new UserProfile
             {
-                Id = SUPER_AGENT_ID,
+                Id = SUPER_ADMIN_ID,
                 FirstName = "Super",
                 LastName = "Agent",
                 LastUpdatedAt = lastUpdatedAt,
@@ -27,7 +27,7 @@ namespace OfficeSync.Infrastructure.Persistence.Initializers
 
             var dbSuerAgentUser = new User
             {
-                Id = SUPER_AGENT_ID,
+                Id = SUPER_ADMIN_ID,
                 UserName = SUPER_EMAIL,
                 NormalizedUserName = SUPER_EMAIL.ToUpper(),
                 Email = SUPER_EMAIL,
@@ -42,7 +42,7 @@ namespace OfficeSync.Infrastructure.Persistence.Initializers
             };
             _modelBuilder.Entity<User>().HasData(dbSuerAgentUser);
 
-            var dbUserRole = new UserRole { UserId = SUPER_AGENT_ID, RoleId = RoleInitializer.SUPER_AGENT };
+            var dbUserRole = new UserRole { UserId = SUPER_ADMIN_ID, RoleId = RoleInitializer.SUPER_ADMIN };
             _modelBuilder.Entity<UserRole>().HasData(dbUserRole);
         }
     }

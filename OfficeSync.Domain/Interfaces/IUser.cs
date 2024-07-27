@@ -1,4 +1,4 @@
-﻿using OfficeSync.Domain.Entities;
+﻿using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Domain.Enumerations;
 using System.ComponentModel.DataAnnotations.Schema;
 

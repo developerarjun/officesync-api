@@ -1,5 +1,5 @@
 ﻿using OfficeSync.Application.Common.Models;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Domain.Enumerations;
 using OfficeSync.Domain.Interfaces;
 

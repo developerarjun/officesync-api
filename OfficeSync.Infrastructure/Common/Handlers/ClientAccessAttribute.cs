@@ -20,11 +20,11 @@ namespace OfficeSync.Infrastructure.Common.Handlers
                                                            .Select(s => int.Parse(s.Value))
                                                            .ToArray();
 
-                if (!roles.Any(r => r == RoleInitializer.CUSTOMER))
-                {
-                    context.Result = new ForbidResult();
-                    return;
-                }
+                //if (!roles.Any(r => r == RoleInitializer.CUSTOMER))
+                //{
+                //    context.Result = new ForbidResult();
+                //    return;
+                //}
             }
         }
     }

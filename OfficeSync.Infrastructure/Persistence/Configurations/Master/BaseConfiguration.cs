@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 
-namespace OfficeSync.Infrastructure.Persistence.Configurations
+namespace OfficeSync.Infrastructure.Persistence.Configurations.Master
 {
     public abstract class BaseConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : BaseEntity<int>
     {

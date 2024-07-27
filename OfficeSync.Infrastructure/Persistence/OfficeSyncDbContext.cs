@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OfficeSync.Application.Common.Events;
 using OfficeSync.Application.Common.Interfaces;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Domain.Interfaces;
 using OfficeSync.Infrastructure.Persistence.Identity;
 using OfficeSync.Infrastructure.Persistence.Initializers;

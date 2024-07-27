@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OfficeSync.Domain.Entities;
+using OfficeSync.Domain.Entities.Master;
 
-namespace OfficeSync.Infrastructure.Persistence.Configurations
+namespace OfficeSync.Infrastructure.Persistence.Configurations.Master
 {
     public class UserProfileConfiguration : BaseConfiguration<UserProfile>
     {
