@@ -26,5 +26,17 @@
 	<ItemGroup>
 	  <Folder Include="Persistence\Migrations\" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Persistence\Initializers\SeedData\RolePermissionsModuleSeedData.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Persistence\Initializers\SeedData\ModuleSeedData.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Persistence\Initializers\SeedData\AdminUsersSeedData.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 	
 </Project>

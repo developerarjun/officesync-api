@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.Reflection;
+using System.Text.Json;
 
 namespace OfficeSync.Application.Common.Helpers
 {
@@ -20,6 +22,23 @@ namespace OfficeSync.Application.Common.Helpers
             }
 
             return html;
+        }
+
+        public static async Task<T> ReadJsonFile<T>(string jsonFileName, string filePath, CancellationToken cancellationToken = default)
+        {
+            //Your template file should be in the debug/release folder. 
+            string path = $"{ filePath }\\{ jsonFileName}";
+            string absoluteFilePath = Path.Combine(_rootPath, $"{path}");
+            if (!File.Exists(absoluteFilePath)) throw new FileNotFoundException();
+
+            T content;
+            using (var sr = new StreamReader(absoluteFilePath))
+            {
+                string json = await sr.ReadToEndAsync();
+                content = JsonSerializer.Deserialize<T>(json);
+            }
+
+            return content;
         }
 
         public static async Task<byte[]> GetFileBytesAsync(this IFormFile formFile)

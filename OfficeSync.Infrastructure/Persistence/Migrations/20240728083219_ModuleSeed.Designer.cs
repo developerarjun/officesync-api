@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OfficeSync.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using OfficeSync.Infrastructure.Persistence;
 namespace OfficeSync.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(OfficeSyncDbContext))]
-    partial class OfficeSyncDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240728083219_ModuleSeed")]
+    partial class ModuleSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -180,44 +183,6 @@ namespace OfficeSync.Infrastructure.Persistence.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("RolePermissionsModule");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Action = 1,
-                            IsActive = false,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            ModuleId = 1,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Action = 2,
-                            IsActive = false,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            ModuleId = 1,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Action = 3,
-                            IsActive = false,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            ModuleId = 1,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Action = 4,
-                            IsActive = false,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
-                            ModuleId = 1,
-                            RoleId = 1
-                        });
                 });
 
             modelBuilder.Entity("OfficeSync.Domain.Entities.Master.UserProfile", b =>
@@ -270,42 +235,6 @@ namespace OfficeSync.Infrastructure.Persistence.Migrations
                             IsActive = true,
                             LastName = "Agent",
                             LastUpdatedAt = new DateTimeOffset(new DateTime(2023, 2, 28, 10, 10, 58, 959, DateTimeKind.Unspecified).AddTicks(6954), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FirstName = "Dibya",
-                            IsActive = true,
-                            LastName = "Joshi",
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8475), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            FirstName = "Sandesh",
-                            IsActive = true,
-                            LastName = "Thapa",
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8620), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            FirstName = "Abin",
-                            IsActive = true,
-                            LastName = "Shrestha",
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8651), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            FirstName = "Nabin",
-                            IsActive = true,
-                            LastName = "Khadka",
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8681), new TimeSpan(0, 0, 0, 0, 0)),
                             LastUpdatedBy = "SA"
                         });
                 });
@@ -455,82 +384,6 @@ namespace OfficeSync.Infrastructure.Persistence.Migrations
                             SecurityStamp = "851536ae-aded-4c9d-b342-738d0fb066eb",
                             TwoFactorEnabled = false,
                             UserName = "developerarjun1@gmail.com"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
-                            DefaultMfaProvider = 0,
-                            Email = "developerdibya77@gmail.com",
-                            EmailConfirmed = true,
-                            IsActive = true,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8584), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA",
-                            LockoutEnabled = true,
-                            NormalizedEmail = "DEVELOPERDIBYA77@GMAIL.COM",
-                            NormalizedUserName = "DEVELOPERDIBYA77@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "851536ae-aded-4c9d-b342-738d0fb066eb",
-                            TwoFactorEnabled = false,
-                            UserName = "developerdibya77@gmail.com"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
-                            DefaultMfaProvider = 0,
-                            Email = "sandeshthapa5907@gmail.com",
-                            EmailConfirmed = true,
-                            IsActive = true,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8631), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA",
-                            LockoutEnabled = true,
-                            NormalizedEmail = "SANDESHTHAPA5907@GMAIL.COM",
-                            NormalizedUserName = "SANDESHTHAPA5907@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "851536ae-aded-4c9d-b342-738d0fb066eb",
-                            TwoFactorEnabled = false,
-                            UserName = "sandeshthapa5907@gmail.com"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
-                            DefaultMfaProvider = 0,
-                            Email = "shresthaabin88@gmail.com",
-                            EmailConfirmed = true,
-                            IsActive = true,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8661), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA",
-                            LockoutEnabled = true,
-                            NormalizedEmail = "SHRESTHAABIN88@GMAIL.COM",
-                            NormalizedUserName = "SHRESTHAABIN88@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "851536ae-aded-4c9d-b342-738d0fb066eb",
-                            TwoFactorEnabled = false,
-                            UserName = "shresthaabin88@gmail.com"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
-                            DefaultMfaProvider = 0,
-                            Email = "nabinkhadka330@gmail.com",
-                            EmailConfirmed = true,
-                            IsActive = true,
-                            LastUpdatedAt = new DateTimeOffset(new DateTime(2024, 7, 28, 8, 47, 13, 337, DateTimeKind.Unspecified).AddTicks(8695), new TimeSpan(0, 0, 0, 0, 0)),
-                            LastUpdatedBy = "SA",
-                            LockoutEnabled = true,
-                            NormalizedEmail = "NABINKHADKA330@GMAIL.COM",
-                            NormalizedUserName = "NABINKHADKA330@GMAIL.COM",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "851536ae-aded-4c9d-b342-738d0fb066eb",
-                            TwoFactorEnabled = false,
-                            UserName = "nabinkhadka330@gmail.com"
                         });
                 });
 
@@ -552,26 +405,6 @@ namespace OfficeSync.Infrastructure.Persistence.Migrations
                         new
                         {
                             UserId = 1,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            UserId = 3,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            UserId = 4,
-                            RoleId = 1
-                        },
-                        new
-                        {
-                            UserId = 5,
                             RoleId = 1
                         });
                 });

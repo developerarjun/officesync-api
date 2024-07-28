@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OfficeSync.Application.Common.Helpers;
 using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Infrastructure.Persistence.Identity;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OfficeSync.Infrastructure.Persistence.Initializers
 {
@@ -44,6 +46,47 @@ namespace OfficeSync.Infrastructure.Persistence.Initializers
 
             var dbUserRole = new UserRole { UserId = SUPER_ADMIN_ID, RoleId = RoleInitializer.SUPER_ADMIN };
             _modelBuilder.Entity<UserRole>().HasData(dbUserRole);
+
+            SeedUsersFromJSON().GetAwaiter().GetResult();
         }
+
+        public async Task<List<UserSeedData>> GetJsonUsersDataToSeed()
+        {
+            var usersToSeed = await FileHelper.ReadJsonFile<List<UserSeedData>>("AdminUsersSeedData.json", "Persistence\\Initializers\\SeedData");
+
+            return usersToSeed;
+        }
+        public async Task SeedUsersFromJSON()
+        {
+            var usersToSeed = await GetJsonUsersDataToSeed();
+            if (usersToSeed is not null && usersToSeed.Count() > 0)
+            {
+                usersToSeed.ForEach(e =>
+                {
+                    var userProfile = e.UserProfile;
+                    var user = e.User;
+                    userProfile.Id= user.Id;
+                    userProfile.LastUpdatedAt = new DateTimeOffset(DateTime.UtcNow);
+
+                    _modelBuilder.Entity<UserProfile>().HasData(userProfile);
+
+                    user.NormalizedEmail = user.Email.ToUpper();
+                    user.NormalizedUserName = user.UserName.ToUpper();
+                    user.LastUpdatedAt = new DateTimeOffset(DateTime.UtcNow);
+                    _modelBuilder.Entity<User>().HasData(user);
+
+                    var userRole = new UserRole { UserId = user.Id, RoleId = e.UserRole };
+                    _modelBuilder.Entity<UserRole>().HasData(userRole);
+                });
+            }
+        }
+
+    }
+
+    public class UserSeedData
+    {
+        public UserProfile UserProfile { get; set; }
+        public User User { get; set; }
+        public int UserRole { get; set; }//TODO: Handle it through ENUM or something better that this
     }
 }

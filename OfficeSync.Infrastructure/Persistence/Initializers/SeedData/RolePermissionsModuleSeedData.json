@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "RoleId": 1,
+    "ModuleId": 1,
+    "Action": 1
+  },
+  {
+    "Id": 2,
+    "RoleId": 1,
+    "ModuleId": 1,
+    "Action": 2
+  },
+  {
+    "Id": 3,
+    "RoleId": 1,
+    "ModuleId": 1,
+    "Action": 3
+  },
+  {
+    "Id": 4,
+    "RoleId": 1,
+    "ModuleId": 1,
+    "Action": 4
+  }
+]

@@ -53,6 +53,10 @@ namespace OfficeSync.Infrastructure.Persistence
             roleInitializer.SeedRoles();
             var userInitializer = new UserInitializer(builder);
             userInitializer.SeedUsers();
+            var moduleInitializer = new ModuleInitializer(builder);
+            moduleInitializer.SeedModules();
+            var rolePermissionModuleInitializer = new RolePermissionModuleInitializer(builder);
+            rolePermissionModuleInitializer.SeedRolePermissionModules();
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

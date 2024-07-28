@@ -1,0 +1,82 @@
+[
+  {
+    "User": {
+      "Id": 2,
+      "UserName": "developerdibya77@gmail.com",
+      "Email": "developerdibya77@gmail.com",
+      "EmailConfirmed": true,
+      "ConcurrencyStamp": "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
+      "SecurityStamp": "851536ae-aded-4c9d-b342-738d0fb066eb",
+      "LastUpdatedBy": "SA",
+      "LockoutEnabled": true,
+      "IsActive": true
+    },
+    "UserProfile": {
+      "FirstName": "Dibya",
+      "LastName": "Joshi",
+      "LastUpdatedBy": "SA",
+      "IsActive": true
+    },
+    "UserRole": 1
+  },
+  {
+    "User": {
+      "Id": 3,
+      "UserName": "sandeshthapa5907@gmail.com",
+      "Email": "sandeshthapa5907@gmail.com",
+      "EmailConfirmed": true,
+      "ConcurrencyStamp": "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
+      "SecurityStamp": "851536ae-aded-4c9d-b342-738d0fb066eb",
+      "LastUpdatedBy": "SA",
+      "LockoutEnabled": true,
+      "IsActive": true
+    },
+    "UserProfile": {
+      "FirstName": "Sandesh",
+      "LastName": "Thapa",
+      "LastUpdatedBy": "SA",
+      "IsActive": true
+    },
+    "UserRole": 1
+  },
+  {
+    "User": {
+      "Id": 4,
+      "UserName": "shresthaabin88@gmail.com",
+      "Email": "shresthaabin88@gmail.com",
+      "EmailConfirmed": true,
+      "ConcurrencyStamp": "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
+      "SecurityStamp": "851536ae-aded-4c9d-b342-738d0fb066eb",
+      "LastUpdatedBy": "SA",
+      "LockoutEnabled": true,
+      "IsActive": true
+    },
+    "UserProfile": {
+      "FirstName": "Abin",
+      "LastName": "Shrestha",
+      "LastUpdatedBy": "SA",
+      "IsActive": true
+    },
+    "UserRole": 1
+  },
+  {
+    "User": {
+      "Id": 5,
+      "UserName": "nabinkhadka330@gmail.com",
+      "Email": "nabinkhadka330@gmail.com",
+      "EmailConfirmed": true,
+      "ConcurrencyStamp": "b91d74d8-5516-4cfb-b7e5-02d3885cb2bd",
+      "SecurityStamp": "851536ae-aded-4c9d-b342-738d0fb066eb",
+      "LastUpdatedBy": "SA",
+      "LockoutEnabled": true,
+      "IsActive": true
+    },
+    "UserProfile": {
+      "FirstName": "Nabin",
+      "LastName": "Khadka",
+      "LastUpdatedBy": "SA",
+      "IsActive": true
+    },
+    "UserRole": 1
+  }
+]
