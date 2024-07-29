@@ -323,7 +323,7 @@ namespace OfficeSync.Infrastructure.Services
             var codeEncoded = WebEncoders.Base64UrlEncode(tokenGeneratedBytes);
 
             dbUser.EventActivity = UserEventActivity.RequestChangePassword;
-            dbUser.Link = $"{clientUrl}/accounts/reset-password?firstname={dbUser.ProfileRef.FirstName}&lastname={dbUser.ProfileRef.LastName}&email={dbUser.Email}&token={codeEncoded}";
+            dbUser.Link = $"{clientUrl}/account/reset-password?firstname={dbUser.ProfileRef.FirstName}&lastname={dbUser.ProfileRef.LastName}&email={dbUser.Email}&token={codeEncoded}";
             dbUser.Token = codeEncoded;
             dbUser.LastUpdatedAt = DateTimeOffset.UtcNow;
             dbUser.LastUpdatedBy = dbUser.Email;

@@ -2,7 +2,6 @@
 using OfficeSync.Application.Common.Helpers;
 using OfficeSync.Domain.Entities.Master;
 using OfficeSync.Infrastructure.Persistence.Identity;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OfficeSync.Infrastructure.Persistence.Initializers
 {
